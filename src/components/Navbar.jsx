@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center font-mono justify-between px-4 py-4 bg-white relative">
+    <nav className="flex items-center font-mono justify-between px-4 py-4 bg-transparent relative">
       {/* Logo */}
       <div className="flex items-center">
         <Image src="/logo.svg" alt="FlemVex Logo" width={120} height={120} priority />
@@ -45,9 +45,11 @@ const Navbar = () => {
 
         <div className="flex items-center gap-4">
           <Link href='/auth/login'><button className="px-4 py-2 rounded-xl text-blue1 hover:text-blue-700 border-1 font-semibold border-blue1">Sign In</button></Link>
-          <button className="px-4 py-2 bg-blue1 text-white font-semibold rounded-lg hover:bg-blue2">
-            Create Free Account
-          </button>
+          <Link href='/auth/signup'>
+            <button className="px-4 py-2 bg-blue1 text-white font-semibold rounded-lg hover:bg-blue2">
+              Create Free Account
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -59,10 +61,12 @@ const Navbar = () => {
             <Link href="/business" className={getLinkClass('/business')}>Business</Link>
             <Link href="/faqs" className={getLinkClass('/faqs')}>FAQs</Link>
             <Link href="/resources" className={getLinkClass('/resources')}>Resources</Link>
-            <button className="px-4 py-2 text-blue1 hover:text-blue2">Sign In</button>
-            <button className="px-4 py-2 bg-blue1 text-white rounded-lg hover:bg-blue2 w-full">
-              Create Free Account
-            </button>
+            <Link href='/auth/login'><button className="px-4 py-2 text-blue1 hover:text-blue2">Sign In</button></Link>
+            <Link href='/auth/signup'>
+              <button className="px-4 py-2 bg-blue1 text-white rounded-lg hover:bg-blue2 w-full">
+                Create Free Account
+              </button>
+            </Link>
           </div>
         </div>
       )}
