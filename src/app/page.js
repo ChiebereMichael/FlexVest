@@ -10,7 +10,7 @@ function page() {
           {/* Left Column - Text Content */}
           <div className="space-y-6">
             <h1 className="text-4xl text-blue2 lg:text-6xl font-bold leading-tight">
-            Beat Inflation ,<br/> Build Your Future!
+            Beat Inflation,<br/> Build Your Future!
             </h1>
             <p className="text-black text-lg lg:text-xl">
             For students, freelancers,  and families alike, Flexvest turns shaky savings into stable growth and protects your funds from local inflation and devaluation.
