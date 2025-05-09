@@ -65,12 +65,14 @@ function page() {
                     <h3 className="font-semibold">New User? <Link href='/auth/signup'><span className="text-blue1">Create account</span></Link></h3>
                 </div>
                   <div>
-                      <button
-                        type="submit"
-                        className="w-full py-2 px-6 border border-transparent rounded-lg text-sm md:text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
-                      >
-                        Sign in
-                      </button>
+                      <Link href='/dashboard'>
+                        <button
+                          type="submit"
+                          className="w-full py-2 px-6 border border-transparent rounded-lg text-sm md:text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+                        >
+                          Sign in
+                        </button>
+                      </Link>
                   </div>
               </div>
             </form>

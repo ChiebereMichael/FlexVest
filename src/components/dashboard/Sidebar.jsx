@@ -5,6 +5,12 @@ import { usePathname } from 'next/navigation';
 
 export default function Sidebar({ isOpen, onClose }) {
   const pathname = usePathname();
+
+  const handleLinkClick = () => {
+    if (window.innerWidth < 768) { // Only close on mobile
+      onClose();
+    }
+  };
   
   const navItems = [
     { 
@@ -47,6 +53,7 @@ export default function Sidebar({ isOpen, onClose }) {
             <Link
               key={item.path}
               href={item.path}
+              onClick={handleLinkClick}
               className={`flex items-center space-x-2 px-4 py-3 mb-2 rounded-lg transition-colors ${
                 pathname === item.path ? 'bg-blue-50 text-blue-600' : 'text-gray-600 hover:bg-gray-50'
               }`}
